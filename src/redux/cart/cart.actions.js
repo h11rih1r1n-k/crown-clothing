@@ -1,4 +1,4 @@
-import { TOGGLE_CART_HIDDEN } from "./cart.constants";
+import { TOGGLE_CART_HIDDEN, ADD_ITEM } from "./cart.constants";
 
 const toggleCartHidden = () => {
   return {
@@ -6,4 +6,11 @@ const toggleCartHidden = () => {
   };
 };
 
-export { toggleCartHidden };
+const addItem = (item) => {
+  return {
+    type: ADD_ITEM,
+    payload: item,
+  };
+};
+
+export { toggleCartHidden, addItem };
