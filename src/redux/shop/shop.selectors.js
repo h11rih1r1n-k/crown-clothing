@@ -7,4 +7,19 @@ const selectShopCollections = createSelector(
   (shop) => shop.collections
 );
 
-export { selectShopCollections };
+const selectShopPreviewCollections = createSelector(
+  [selectShopCollections],
+  (collection) => Object.values(collection)
+);
+
+const selectCollectionCategory = (collectionUrlParam) =>
+  createSelector(
+    [selectShopCollections],
+    (collection) => collection[collectionUrlParam]
+  );
+
+export {
+  selectShopCollections,
+  selectShopPreviewCollections,
+  selectCollectionCategory,
+};
