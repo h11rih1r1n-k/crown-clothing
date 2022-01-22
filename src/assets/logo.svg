@@ -1,0 +1,7 @@
+
+<svg width="70px" height="40px" viewBox="0 0 70 39" class="logo">
+  <rect x="2" y="2" rx="4" ry="4" width="25" height="8" style="fill: #20b2aa; stroke: #004b49; stroke-width: 1;"></rect>
+  <rect x="2" y="12" rx="4" ry="4" width="20" height="8" style="fill: #20b2aa; stroke: #004b49; stroke-width: 1;"></rect>
+  <rect x="2" y="22" rx="4" ry="4" width="8" height="17" style="fill: #20b2aa; stroke: #004b49; stroke-width: 1;"></rect>
+  <path d="M47,2 A20,17 0 0 0 47,38 A20,17 0 0 0 57,34 A4,4 0 0 0 55,27 A12,9 0 0 1 47,30 A12,9 0 0 1 47,10 A12,9 0 0 1 55,13 A4,4 0 0 0 57,6 A20,17 0 0 0 47,2" style="fill: #20b2aa; stroke-width:1;stroke:#004b49"/>
+</svg>
