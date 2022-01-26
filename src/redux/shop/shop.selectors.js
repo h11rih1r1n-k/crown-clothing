@@ -18,8 +18,20 @@ const selectCollectionCategory = (collectionUrlParam) =>
     (collection) => collection[collectionUrlParam]
   );
 
+const selectCollectionFetching = createSelector(
+  [selectShop],
+  (shop) => shop.isFetching
+);
+
+const selectCollectionLoaded = createSelector(
+  [selectShopCollections],
+  (collections) => Object.keys(collections).length !== 0
+);
+
 export {
   selectShopCollections,
   selectShopPreviewCollections,
   selectCollectionCategory,
+  selectCollectionFetching,
+  selectCollectionLoaded,
 };
