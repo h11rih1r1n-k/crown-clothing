@@ -1,8 +1,4 @@
-import {
-  FETCH_COLLECTIONS_START,
-  FETCH_COLLECTIONS_SUCCESS,
-  FETCH_COLLECTIONS_FAILURE,
-} from "./shop.constants";
+import ShopConstants from "./shop.constants";
 
 const INITIAL_STATE = {
   collections: {},
@@ -12,20 +8,20 @@ const INITIAL_STATE = {
 
 const shopReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case FETCH_COLLECTIONS_START:
+    case ShopConstants.FETCH_COLLECTIONS_START:
       return {
         ...state,
         isFetching: true,
         errorMessage: null,
       };
-    case FETCH_COLLECTIONS_SUCCESS:
+    case ShopConstants.FETCH_COLLECTIONS_SUCCESS:
       return {
         ...state,
         collections: action.payload,
         isFetching: false,
         errorMessage: null,
       };
-    case FETCH_COLLECTIONS_FAILURE:
+    case ShopConstants.FETCH_COLLECTIONS_FAILURE:
       return {
         ...state,
         isFetching: false,

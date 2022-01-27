@@ -1,35 +1,34 @@
-import {
-  TOGGLE_CART_HIDDEN,
-  ADD_ITEM,
-  CLEAR_ITEM_FROM_CART,
-  REMOVE_ITEM,
-} from "./cart.constants";
+import CartConstants from "./cart.constants";
 
-const toggleCartHidden = () => {
+export const toggleCartHidden = () => {
   return {
-    type: TOGGLE_CART_HIDDEN,
+    type: CartConstants.TOGGLE_CART_HIDDEN,
   };
 };
 
-const addItem = (item) => {
+export const addItem = (item) => {
   return {
-    type: ADD_ITEM,
+    type: CartConstants.ADD_ITEM,
     payload: item,
   };
 };
 
-const clearItemFromCart = (item) => {
+export const clearItemFromCart = (item) => {
   return {
-    type: CLEAR_ITEM_FROM_CART,
+    type: CartConstants.CLEAR_ITEM_FROM_CART,
     payload: item,
   };
 };
 
-const removeItem = (item) => {
+export const removeItem = (item) => {
   return {
-    type: REMOVE_ITEM,
+    type: CartConstants.REMOVE_ITEM,
     payload: item,
   };
 };
 
-export { toggleCartHidden, addItem, clearItemFromCart, removeItem };
+export const clearCart = () => {
+  return {
+    type: CartConstants.CLEAR_CART,
+  };
+};
