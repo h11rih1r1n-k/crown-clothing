@@ -1,5 +1,5 @@
-
-<svg width="70px" height="40px" viewBox="0 0 70 39" class="logo">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="40px" viewBox="0 0 60 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect x="2" y="2" rx="4" ry="4" width="25" height="8" style="fill: #20b2aa; stroke: #004b49; stroke-width: 1;"></rect>
   <rect x="2" y="12" rx="4" ry="4" width="20" height="8" style="fill: #20b2aa; stroke: #004b49; stroke-width: 1;"></rect>
   <rect x="2" y="22" rx="4" ry="4" width="8" height="17" style="fill: #20b2aa; stroke: #004b49; stroke-width: 1;"></rect>

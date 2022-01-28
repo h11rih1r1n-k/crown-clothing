@@ -1,6 +1,6 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
-import Crwnsvg from "../../assets/crown.svg";
+import Logosvg from "../../assets/logo.svg";
 import "./stripe-button.styles.scss";
 
 function StripeButton({ price }) {
@@ -9,7 +9,6 @@ function StripeButton({ price }) {
     "pk_test_51KJruESEkyJcVDyiuHy5mMxb20tb1yaPeVedZJ7gk7ruZH4P4gJjQTYaAWQe2bI9XgihsNNTmlhRSDFxnkCY5M50002hhsQzPy";
 
   const onToken = (token) => {
-    console.log(token);
     alert("Payment Sucessful");
   };
 
@@ -17,10 +16,10 @@ function StripeButton({ price }) {
     <div className="stripe-pay">
       <StripeCheckout
         label="Pay Now"
-        name="CRWN Clothing Ltd."
+        name="Fashion Code Ltd."
         billingAddress
         shippingAddress
-        image={Crwnsvg}
+        image={Logosvg}
         description={`Your total is $${price}`}
         amount={priceForStripe}
         token={onToken}
