@@ -8,7 +8,7 @@ import HomePage from "./pages/home/home.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import ShopPage from "./pages/shop/shop.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
   const currentUser = useSelector(selectCurrentUser);

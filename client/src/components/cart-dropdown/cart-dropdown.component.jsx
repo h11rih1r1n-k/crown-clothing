@@ -5,6 +5,7 @@ import { selectCartItems } from "../../redux/cart/cart.selectors";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 import CustomButton from "../custom-button/custom-button.component";
 import CartItem from "../cart-item/cart-item.component";
+import CartEmpty from "../cart-empty/cart-empty.component";
 import "./cart-dropdown.styles.scss";
 
 function CartDropdown() {
@@ -18,7 +19,7 @@ function CartDropdown() {
         {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} item={item} />)
         ) : (
-          <span className="empty-message">Your cart is empty</span>
+          <CartEmpty />
         )}
       </div>
       <CustomButton
