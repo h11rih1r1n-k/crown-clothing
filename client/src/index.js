@@ -6,6 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./redux/store";
 import "./index.scss";
 import App from "./App";
+import * as servicecWorker from "./serviceWorker";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,3 +18,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+
+servicecWorker.register();
