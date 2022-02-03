@@ -11,9 +11,12 @@ import "./App.scss";
 const HomePage = lazy(() => import("./pages/home/home.component"));
 const ShopPage = lazy(() => import("./pages/shop/shop.component"));
 const CheckoutPage = lazy(() => import("./pages/checkout/checkout.component"));
-const SignInAndSignUpPage = lazy(() =>
-  import("./pages/sign-in-and-sign-up/sign-in-and-sign-up.component")
-);
+// const SignInAndSignUpPage = lazy(() =>
+//   import("./pages/sign-in-and-sign-up/sign-in-and-sign-up.component")
+// );
+const ContactPage = lazy(() => import("./pages/contact/contact.component"));
+const SignIn = lazy(() => import("./pages/sign-in/sign-in.component"));
+const SignUp = lazy(() => import("./pages/sign-up/sign-up.component"));
 
 const App = () => {
   const currentUser = useSelector(selectCurrentUser);
@@ -24,21 +27,21 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
             <Route exact path="/" component={HomePage} />
             <Route path="/shop" component={ShopPage} />
+            <Route path="/contact" component={ContactPage} />
             <Route exact path="/checkout" component={CheckoutPage} />
             <Route
               exact
               path="/signin"
-              render={() =>
-                currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />
-              }
+              render={() => (currentUser ? <Redirect to="/" /> : <SignIn />)}
             />
+            <Route exact path="/signup" component={SignUp} />
           </Suspense>
         </ErrorBoundary>
       </Switch>

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component";
+import FormInput from "../../components/form-input/form-input.component";
+import CustomButton from "../../components/custom-button/custom-button.component";
+import Divider from "../../components/divider/divider.component";
 import {
   googleSignInStart,
   emailSignInStart,
@@ -52,6 +54,12 @@ const SignIn = () => {
           required
         />
 
+        <div className="forgot-password">
+          <Link className="forgot-link" to="#">
+            Forgot Password?
+          </Link>
+        </div>
+
         <div className="buttons">
           <CustomButton type="submit">SIGN IN</CustomButton>
           <CustomButton
@@ -61,6 +69,15 @@ const SignIn = () => {
           >
             SIGN IN WITH GOOGLE
           </CustomButton>
+        </div>
+
+        <Divider text="or" />
+
+        <div className="register">
+          <div>New to fashion code?</div>
+          <Link className="create-user" to="/signup">
+            Create User
+          </Link>
         </div>
       </form>
     </div>

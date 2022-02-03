@@ -1,0 +1,45 @@
+.posture {
+  font-size: 40px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  margin: 30px 0px 50px 0px;
+
+  .quotation {
+    justify-self: end;
+  }
+
+  .image {
+    width: 75%;
+    height: 20vw;
+    justify-self: start;
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      height: 55vw;
+    }
+  }
+
+  .contact {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+    justify-self: end;
+    max-width: 70%;
+
+    @media screen and (max-width: 800px) {
+      max-width: unset;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+    display: block;
+
+    .quotation {
+      display: none;
+    }
+  }
+}
