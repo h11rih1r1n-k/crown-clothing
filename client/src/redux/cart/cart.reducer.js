@@ -13,6 +13,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         hidden: !state.hidden,
       };
+    case CartConstants.SET_CART_ITEMS_FROM_FIRESTORE:
+      return {
+        ...state,
+        cartItems: action.payload,
+      };
     case CartConstants.ADD_ITEM:
       return {
         ...state,

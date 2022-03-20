@@ -6,6 +6,13 @@ export const toggleCartHidden = () => {
   };
 };
 
+export const setCartItemsFromFirestore = (cartItems) => {
+  return {
+    type: CartConstants.SET_CART_ITEMS_FROM_FIRESTORE,
+    payload: cartItems,
+  };
+};
+
 export const addItem = (item) => {
   return {
     type: CartConstants.ADD_ITEM,
