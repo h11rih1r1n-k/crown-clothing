@@ -55,7 +55,7 @@ const SignIn = () => {
         />
 
         <div className="forgot-password">
-          <Link className="forgot-link" to="#">
+          <Link className="forgot-link" to="/forgot-password">
             Forgot Password?
           </Link>
         </div>

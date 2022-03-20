@@ -17,6 +17,9 @@ const CheckoutPage = lazy(() => import("./pages/checkout/checkout.component"));
 const ContactPage = lazy(() => import("./pages/contact/contact.component"));
 const SignIn = lazy(() => import("./pages/sign-in/sign-in.component"));
 const SignUp = lazy(() => import("./pages/sign-up/sign-up.component"));
+const ForgotPassword = lazy(() =>
+  import("./pages/forgot-password/forgot-password.component")
+);
 
 const App = () => {
   const currentUser = useSelector(selectCurrentUser);
@@ -41,7 +44,12 @@ const App = () => {
               path="/signin"
               render={() => (currentUser ? <Redirect to="/" /> : <SignIn />)}
             />
-            <Route exact path="/signup" component={SignUp} />
+            <Route
+              exact
+              path="/signup"
+              render={() => (currentUser ? <Redirect to="/" /> : <SignUp />)}
+            />
+            <Route exact path="/forgot-password" component={ForgotPassword} />
           </Suspense>
         </ErrorBoundary>
       </Switch>

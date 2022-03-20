@@ -66,3 +66,9 @@ export const signUpFailure = () => {
     type: UserConstants.SIGN_UP_FAILURE,
   };
 };
+export const sendPasswordResetEmailStart = (email) => {
+  return {
+    type: UserConstants.SEND_PASSWORD_RESET_EMAIL_START,
+    payload: email,
+  };
+};

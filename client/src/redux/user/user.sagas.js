@@ -109,6 +109,21 @@ function* onSignUpSuccess() {
   yield takeLatest(UserConstants.SIGN_UP_SUCCESS, signInAfterSignUp);
 }
 
+function* passwordResetEmail({ payload }) {
+  try {
+    yield auth.sendPasswordResetEmail(payload);
+    yield alert("Password reset email sent");
+  } catch (error) {
+    console.log("Password reset email sent failure");
+  }
+}
+function* sendPasswordResetEmailStart() {
+  yield takeLatest(
+    UserConstants.SEND_PASSWORD_RESET_EMAIL_START,
+    passwordResetEmail
+  );
+}
+
 export function* userSagas() {
   yield all([
     call(onGoogleSignInStart),
@@ -117,5 +132,6 @@ export function* userSagas() {
     call(onSignOutStart),
     call(onSignUpStart),
     call(onSignUpSuccess),
+    call(sendPasswordResetEmailStart),
   ]);
 }
