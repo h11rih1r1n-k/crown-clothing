@@ -1,4 +1,3 @@
-import React from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCartItems } from "../../redux/cart/cart.selectors";
@@ -17,7 +16,7 @@ function CartDropdown() {
     <div className="cart-dropdown">
       <div className="cart-items">
         {cartItems.length ? (
-          cartItems.map((item) => <CartItem key={item.id} item={item} />)
+          cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
         ) : (
           <CartEmpty />
         )}

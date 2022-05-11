@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import FormInput from "../../components/form-input/form-input.component";
@@ -65,7 +65,7 @@ const SignIn = () => {
           <CustomButton
             type="button"
             isGoogleSignIn
-            onClick={() => dispatch(googleSignInStart())}
+            onClick={(e) => dispatch(googleSignInStart())}
           >
             SIGN IN WITH GOOGLE
           </CustomButton>
